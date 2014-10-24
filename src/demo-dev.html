@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Demo eduGrid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="educarm"/>
+
+    
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/angular-loading.css"> 
+	
+	
+</head>
+<body ng-controller="appController">
+
+<div id="wrapper">
+    <a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayLoading(true)">Muestra Loading</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayLoading(false)">Oculta Loading</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showButtonsUserPre(true)">Muestra Botones pre</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showButtonsUserPre(false)">Oculta Botones pre</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showButtonsUserPost(true)">Muestra Botones post</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showButtonsUserPost(false)">Oculta Botones post</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayFormUser(true)">Muestra Form user</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayFormAvancedSearch(true)">Muestra Form Avanced Search</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayFormSuccessError('1','Todo correcto',1000)">Muestra Form Success</a>
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayFormSuccessError('0','Han sucedido errores:correcto',20000)">Muestra Form error</a>
+	
+	<a href="#" class="btn btn-primary" ng-click="options.gridControl.refresh()">refresca()</a>
+	<h3>Form user:{{options.formGridUser.result}}</h3>
+	<h3>SelectionRows:{{options.selectionRows}}</h3>
+	<h3>Form avanz. search:{{options.formAvancedSearchResult}}</h3>
+	<div class="row">
+		<div class="col-lg-12 col-md-12">
+			<div class="panel panel-default">
+				<div class="panel-heading panel-title">
+				   
+				</div>
+				
+				<div class="panel-body">
+					<div >
+						<div edu-grid  options="options"></div>
+					</div>
+				</div>
+			
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-ui-bootstrap3/ui-bootstrap-tpls.js"></script>
+
+<script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+<script src="bower_components/angular-ui-bootstrap3/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
+
+<script src="bower_components/edu-field/dist/edu-field.js"></script>
+
+<script src="modules/edu-grid.js"></script>
+<script src="directives/edu-grid.js"></script>
+<script src="directives/data-factory.js"></script>
+
+<script src="app.js"></script>
+<script src="mocks/municipios.js"></script>
+<script src="mocks/centros.js"></script>
+<script src="mocks/app-mocks.js"></script>
+
+
+</body>
+</html>

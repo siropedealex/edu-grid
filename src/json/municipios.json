@@ -1,0 +1,28 @@
+[
+{
+    "value":"ABANILLA",
+	"name": "Abanilla",
+	"group":"grupo1"	
+},{
+    "value":"ABARAN",
+	"name": "Abarán2",
+	"group":"grupo1"	
+},{
+    "value":"MURCIA",
+	"name": "Murcia",
+	"group":"grupo1"	
+},{
+    "value":"CARTAGENA",
+	"name": "Cartagena",
+	"group":"grupo1"	
+},{
+    "value":"ALCANTARILLA",
+	"name": "Alcantarilla",
+	"group":"grupo2"	
+},
+{
+    "value":"ABUDEITE",
+	"name": "Albudeite",
+	"group":"grupo2"	
+}
+]

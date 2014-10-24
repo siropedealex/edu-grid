@@ -1,0 +1,14 @@
+cambios
+
+
+edu-grid:
+	 buttonsGridUserPre.oncreate -->  buttonsGridUserPre.disabled
+	 add fkField=campo foreign key en la tabla
+	 add fkValue=valor del campo foreign key 
+	 
+	 add showAvancedSearch:true,
+	add	showFiltersColumns:true,
+	
+	add showSelectColumn:true,
+	
+	add showExtraButtonTopLeft
