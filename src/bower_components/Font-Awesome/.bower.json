@@ -1,0 +1,36 @@
+{
+  "name": "font-awesome",
+  "description": "Font Awesome",
+  "version": "4.2.0",
+  "keywords": [],
+  "homepage": "http://fontawesome.io",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": [
+    "OFL-1.1",
+    "MIT",
+    "CC-BY-3.0"
+  ],
+  "main": [
+    "./css/font-awesome.css",
+    "./fonts/*"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "src",
+    "*.yml",
+    "Gemfile",
+    "Gemfile.lock",
+    "*.md"
+  ],
+  "_release": "4.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v4.2.0",
+    "commit": "ee8ce7869c44aa79c9a7bd437b7b43748f03fc2e"
+  },
+  "_source": "git://github.com/educarm/Font-Awesome.git",
+  "_target": "~4.2.0",
+  "_originalSource": "educarm/Font-Awesome"
+}

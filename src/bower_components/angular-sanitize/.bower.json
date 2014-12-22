@@ -1,0 +1,18 @@
+{
+  "name": "angular-sanitize",
+  "version": "1.2.27",
+  "main": "./angular-sanitize.js",
+  "dependencies": {
+    "angular": "1.2.27"
+  },
+  "homepage": "https://github.com/educarm/angular-sanitize",
+  "_release": "1.2.27",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.27",
+    "commit": "97ec3e6932a1e2e4046eb9f456f2baa037de2e26"
+  },
+  "_source": "git://github.com/educarm/angular-sanitize.git",
+  "_target": "~1.2.17",
+  "_originalSource": "educarm/angular-sanitize"
+}

@@ -241,7 +241,7 @@
                 };
 
                 // ---
-                // GETDATA
+                // GET DATA
                 // ---	
                 $scope.getData = function (oParams) {
                 	//var oParams={};
@@ -262,7 +262,8 @@
                        oParams=$scope.options.listListeners.transformParams(oParams);
 					}
 					
-	                $scope.api.getAll(oParams,function (data) {     
+	                $scope.api.getAll(oParams,function (data) {  
+                        //$scope.searchQuery="";					
 	             		$scope.list =data;
 						$scope.onPageLoadComplete($scope.list);
 						for( var i=0;i< $scope.list.length;i++){
@@ -294,7 +295,6 @@
 					}
 					if($scope.options.hasOwnProperty("formAvancedSearch") && typeof $scope.options.formAvancedSearchResult!='undefined'){
 					
-					    console.log("formAvancedSearch result:"+angular.toJson($scope.options.formAvancedSearchResult));
 						for(var key in $scope.options.formAvancedSearchResult){
 							oParams[key]=$scope.options.formAvancedSearchResult[key];
 						}
@@ -314,7 +314,7 @@
                        $scope.options.listListeners.onButtonRefreshClick($scope.list);
 					}
 					//CLEAN form field searchQuery
-					$scope.searchQuery="";
+					//$scope.searchQuery="";
 					//CLEAN formAvancedSearchResult
 					//$scope.options.formAvancedSearchResult="";
 					

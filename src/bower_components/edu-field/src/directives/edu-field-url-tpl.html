@@ -1,0 +1,28 @@
+<div class="form-group   {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative"><!--   -->
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="text"
+		   class="form-control"
+		   id="{{id}}"
+		   name="name"
+		   placeholder="{{options.placeholder}}"
+		   ng-blur="onBlur()"
+		   ng-focus="onFocus()"
+		   ng-change="onChange()"
+		   autofocus="{{options.autofocus}}"
+		   ng-required="{{options.required}}"
+		   ng-disabled="{{options.disabled}}"
+		   ng-pattern="/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/"
+		   ng-minlength="{{options.min}}"
+           ng-maxlength="{{options.max}}"
+		   ng-model="value">
+		 
+		 <div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+			<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca una url</small>
+			<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.min}} caracteres</small>
+			<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.max}} caracteres</small>
+			<small class="error" ng-show="$invalidPattern">Introduzca una url válida</small>
+		 </div>
+</div>

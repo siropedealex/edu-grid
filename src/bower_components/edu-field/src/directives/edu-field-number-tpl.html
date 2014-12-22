@@ -1,0 +1,22 @@
+<div class="form-group  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="text"
+		class="form-control"
+		id="{{id}}"
+		placeholder="{{options.placeholder}}"
+		autofocus="{{options.autofocus}}"
+		ng-required="{{options.required}}"
+		ng-disabled="{{options.disabled}}"
+		ng-pattern="{{options.pattern?options.pattern:'/^-?[0-9]+$/'}}"
+		ng-model="value"
+		ng-blur="onBlur()"
+		ng-focus="onFocus()"
+		ng-change="onChange()">
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+		<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor. </small>
+		<small class="error" ng-show="$invalidPattern">Introduzca un número válido. </small>
+	</div>
+</div>

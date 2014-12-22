@@ -1,6 +1,6 @@
 {
   "name": "edu-grid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "authors": [
     "educarm"
   ],
@@ -26,18 +26,21 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "educarm/jquery#~2.x",
-    "angular": "educarm/angular#~1.x", 
-    "angular-sanitize": "educarm/angular-sanitize#~1.x",
-    "angular-resource": "educarm/angular-resource#~1.x",
-    "angular-ui-bootstrap3": "educarm/angular-ui-bootstrap3#~0.x",
-    "bootstrap": "educarm/bootstrap#~3.x",
-    "textAngular": "educarm/textAngular#~1.x",
-    "Font-Awesome": "educarm/Font-Awesome#~4.x",
-    "edu-field":"educarm/edu-field#~0.x"
-  
+	"jquery": "educarm/jquery#~2.1.1",
+	"angular": "educarm/angular#~1.2.17", 
+    "angular-sanitize": "educarm/angular-sanitize#~1.2.17",
+    "angular-resource": "educarm/angular-resource#~1.2.17",
+    "angular-ui-bootstrap3": "educarm/angular-ui-bootstrap3#~0.12.0",
+    "bootstrap": "educarm/bootstrap#~3.2.0",
+    "textAngular": "educarm/textAngular#~1.2.2",
+    "Font-Awesome": "educarm/Font-Awesome#~4.2.0",
+    "angular-file-upload": "educarm/angular-file-upload#~1.0.2",
+	"edu-field": "educarm/edu-field#~0.0.1"
   },
   "devDependencies": {
-   "angular-mocks": "educarm/angular-mocks#~1.x"
+     "angular-mocks": "educarm/angular-mocks#~1.2.17"
+  },
+  "resolutions:":{
+     "angular":"1.2.27"
   }
 }

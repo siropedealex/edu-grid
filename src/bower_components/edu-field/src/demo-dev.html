@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Demo eduField</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content="educarm"/>
+
+    
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/edu-complete.css">
+	<script src="js/iban.js"></script>
+	<script src="js/nifnieccc.js"></script>
+	
+	
+</head>
+<body ng-controller="appController">
+
+<div id="wrapper">
+    
+	<h2>FIELD VALUE:{{result}}</h2>
+    <div class="panel panel-default">
+		<div class="panel-heading panel-title">
+		   
+		</div>
+		
+		<div class="panel-body">
+			<ng-form name="formname">
+				<div ng-repeat="field in fields">
+					<div edu-field options="field" value="result[field.key]"> </div>
+				</div>
+			</ng-form>
+		</div>
+    
+	</div>
+
+</div>
+
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-mocks/angular-mocks.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/textAngular/dist/textAngular.min.js"></script>
+<script src="bower_components/angular-ui-bootstrap3/ui-bootstrap-tpls.js"></script>
+<script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
+
+
+
+<script src="modules/edu-field.js"></script>
+<script src="directives/edu-complete.js"></script>
+<script src="directives/edu-field.js"></script>
+
+<script src="app.js"></script>
+
+<script src="mocks/disposiciones_temas.js"></script>
+<script src="mocks/disposiciones_subtemas.js"></script>
+<script src="mocks/centros.js"></script>
+<script src="mocks/app-mocks.js"></script>
+
+
+</body>
+</html>

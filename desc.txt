@@ -1,9 +1,0 @@
-edu-grid
-MÉTODOS:
-- refresh()
-- showOverlayLoading(bShow)
-- showOverlayFormUser(bShow)
-- showOverlayFormAvancedSearch(bShow)
-- showOverlayFormSuccessError(type,text,duration) (type:1|0, duration:mls)
-- showButtonsUserPre(bShow)
-- showButtonsUserPost(bShow)

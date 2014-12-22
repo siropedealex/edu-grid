@@ -10,8 +10,8 @@
     
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.css">
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/angular-loading.css"> 
+	<link rel="stylesheet" type="text/css" href="css/app.css">
+	
 	
 	
 </head>
@@ -30,7 +30,7 @@
 	<a href="#" class="btn btn-primary" ng-click="options.gridControl.showOverlayFormSuccessError('0','Han sucedido errores:correcto',20000)">Muestra Form error</a>
 	
 	<a href="#" class="btn btn-primary" ng-click="options.gridControl.refresh()">refresca()</a>
-	<h3>Form user:{{options.formGridUser.result}}</h3>
+	<h3>Form user:{{options.formUser.result}}</h3>
 	<h3>SelectionRows:{{options.selectionRows}}</h3>
 	<h3>Form avanz. search:{{options.formAvancedSearchResult}}</h3>
 	<div class="row">
@@ -61,7 +61,6 @@
 <script src="bower_components/textAngular/dist/textAngular.min.js"></script>
 <script src="bower_components/angular-ui-bootstrap3/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
-
 <script src="bower_components/edu-field/dist/edu-field.js"></script>
 
 <script src="modules/edu-grid.js"></script>

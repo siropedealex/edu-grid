@@ -1,0 +1,26 @@
+<div class="form-group  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<select class="form-control"
+			id="{{id}}"
+			autofocus="{{options.autofocus}}"
+			dependent-control="{{options.dependentControl}}"
+			ng-blur="onBlur()"
+			ng-focus="onFocus()"
+			ng-change="onChange()"
+			ng-model="value"
+     		ng-required="options.required"
+			ng-disabled="options.disabled"
+			ng-init="value = options.options[options.default]"
+			ng-options="option.value as option.name for option in optionsSelect">
+	</select>
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+				<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor</small>
+				<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.min}} caracteres</small>
+				<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.max}} caracteres</small>
+				<small class="error" ng-show="$invalidPattern">Introduzca un valor válido</small>
+	</div>
+</div>

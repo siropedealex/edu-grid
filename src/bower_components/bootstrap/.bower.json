@@ -1,0 +1,23 @@
+{
+  "name": "bootstrap",
+  "version": "3.2.0",
+  "main": [
+    "./css/bootstrap.css",
+    "./js/bootstrap.js",
+    "./fonts/glyphicons-halflings-regular.eot",
+    "./fonts/glyphicons-halflings-regular.svg",
+    "./fonts/glyphicons-halflings-regular.ttf",
+    "./fonts/glyphicons-halflings-regular.woff"
+  ],
+  "dependencies": {},
+  "homepage": "https://github.com/educarm/bootstrap",
+  "_release": "3.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.2.0",
+    "commit": "1e49eb9cb06fcb110a017b6df853fb458e413d73"
+  },
+  "_source": "git://github.com/educarm/bootstrap.git",
+  "_target": "~3.2.0",
+  "_originalSource": "educarm/bootstrap"
+}

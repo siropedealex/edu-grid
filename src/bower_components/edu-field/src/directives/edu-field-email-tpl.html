@@ -1,0 +1,28 @@
+<div class="form-group {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="text"
+		class="form-control"
+		id="{{id}}"
+		name="{{name}}"
+		placeholder="{{options.placeholder}}"
+		autofocus="{{options.autofocus}}"
+		ng-required="{{options.required}}"
+		ng-disabled="{{options.disabled}}"
+		ng-pattern="/^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|es|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)\b$/"
+		ng-minlength="{{options.min}}"
+        ng-maxlength="{{options.max}}"
+		ng-model="value"
+		ng-blur="onBlur()"
+		ng-focus="onFocus()"
+		ng-change="onChange()">
+		
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+		<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un email</small>
+		<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.min}} caracteres</small>
+		<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.max}} caracteres</small>
+		<small class="error" ng-show="$invalidPattern">Introduzca un email válido</small>
+	</div>
+</div>

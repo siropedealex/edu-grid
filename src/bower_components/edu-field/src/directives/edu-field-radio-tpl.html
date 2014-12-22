@@ -1,0 +1,24 @@
+<div class="radio-group  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label class="control-label">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<div class="radio" 
+		 ng-repeat="(key, option) in options.options">
+		<label >
+			<input type="radio"
+				id="{{id + '_'+ $index}}"
+				autofocus="{{options.autofocus}}"
+				ng-value="option.value"
+				ng-required="{{options.required}}"
+				ng-model="$parent.value"
+				ng-blur="onBlur()"
+				ng-focus="onFocus()"
+				ng-change="onChange()">
+			{{option.name}}
+		</label>
+	</div>
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+		<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor. </small>
+	</div>
+</div>

@@ -1,0 +1,36 @@
+<div class="form-group  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	
+		   
+		   <edu-complete 
+		     id_="{{id}}"
+			 name="{{name}}"
+			 onblur="onBlur()"
+			 onfocus="onFocus()"
+			 autofocus="options.autofocus"
+		     required="options.required"
+             placeholder="{{options.placeholder}}"
+             pause="{{autocpause}}"
+             selectedobject="value"
+             url="{{options.autocurldata}}"
+			 urldataloadall="{{options.autocurldataloadall}}"
+			 localdata="options.autoclocaldata"
+			 searchfields="{{options.autocsearchfields}}"
+             datafield="{{options.autocfieldvalue}}"
+             titlefield="{{options.autocfieldtitle}}"
+             descriptionfield="{{options.autocdescriptionfield}}"
+             imagefield="{{options.autocfieldimg}}"
+			 minlength="{{options.autocminlength}}"
+             inputclass="form-control form-control-small"/>
+			  
+			 <div class="help-block has-error" ng-show="$invalid" style="position:absolute;top:50px">
+				<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor</small>
+				<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.min}} caracteres</small>
+				<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.max}} caracteres</small>
+				<small class="error" ng-show="$invalidPattern">Introduzca un valor válido</small>
+			 </div>
+			  
+</div>

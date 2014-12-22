@@ -15,10 +15,10 @@ app.controller('appController', ['$scope','$http','dataFactoryGrid', function ($
 				];
 	
 	$scope.avancedSearchFieldsFormGrid=[	  
-			        {key: 'fecha_ini_1',type: 'date',col:'col-md-2',label: 'Fecha inicio',placeholder: 'Fecha inicio',autofocus:'',required: false },
-					{key: 'fecha_fin_1',type: 'date',col:'col-md-3',label: 'Fecha fin',placeholder: 'Fecha fin',autofocus:'',required: false },
-					{key: 'fecha_ini_2',type: 'date',col:'col-md-3',label: 'Fecha inicio',placeholder: 'Fecha inicio',autofocus:'',required: false },
-					{key: 'fecha_fin_2',type: 'date',col:'col-md-3',label: 'Fecha fin',placeholder: 'Fecha fin',autofocus:'',required: false },
+			        {key: 'fecha_ini_1',type: 'date',col:'col-md-4',label: 'Fecha inicio',placeholder: 'Fecha inicio',autofocus:'',required: false },
+					{key: 'fecha_fin_1',type: 'date',col:'col-md-4',label: 'Fecha fin',placeholder: 'Fecha fin',autofocus:'',required: false },
+					{key: 'fecha_ini_2',type: 'date',col:'col-md-4',label: 'Fecha inicio',placeholder: 'Fecha inicio',autofocus:'',required: false },
+					{key: 'fecha_fin_2',type: 'date',col:'col-md-4',label: 'Fecha fin',placeholder: 'Fecha fin',autofocus:'',required: false },
 					{key: 'tipo',type: 'text',col:'col-md-12',label: 'Tipo',placeholder: 'Tipo',autofocus:'',required: false }
 				];
 	
@@ -98,6 +98,7 @@ app.controller('appController', ['$scope','$http','dataFactoryGrid', function ($
                  {label: 'Municipio', column: 'vmuncen', weight: '10',type:'text'}
         ],
         metaData:{
+		   panelType:"info",
            limit:50,
 		   orderBy:'vcodcen',
 		   order:'asc'
@@ -150,7 +151,7 @@ app.controller('appController', ['$scope','$http','dataFactoryGrid', function ($
 		     result:{}
 		},
 		formAvancedSearch:{
-			width:'1300',
+			width:'1200',
 			fields:$scope.avancedSearchFieldsFormGrid
 		}
     };

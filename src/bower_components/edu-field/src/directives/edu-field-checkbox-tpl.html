@@ -1,0 +1,21 @@
+<div class="checkbox  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative"><!--ng-required="{{options.required}}"-->
+	<label>
+		<input type="checkbox"
+			id="{{id}}"
+			name="name"
+			autofocus="{{options.autofocus}}"
+			ng-false-value="'N'"
+			ng-true-value="'S'"
+			ng-disabled="{{options.disabled}}"
+			ng-model="value"
+			ng-blur="onBlur()"
+			ng-focus="onFocus()"
+			ng-change="onChange()">
+			{{options.label}}
+			{{options.required ? '*' : ''}}
+	</label>
+	
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+		<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor</small>
+	</div>
+</div>

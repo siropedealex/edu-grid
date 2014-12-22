@@ -1,0 +1,24 @@
+<div class="form-group  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	<input type="week"
+			class="form-control"
+			id="{{id}}"
+			name="{{name}}"
+			placeholder="{{options.placeholder}}"
+			autofocus="{{options.autofocus}}"
+			ng-required="{{options.required}}"
+			ng-disabled="{{options.disabled}}"
+			ng-pattern="/^(19|20)\d\d[-\/]W(0[1-9]|[1-4][0-9]|5[0123])$/"
+			ng-model="value"
+			ng-blur="onBlur()"
+			ng-focus="onFocus()"
+			ng-change="onChange()">
+			
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+		<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca una semana</small>
+		<small class="error" ng-show="$invalidPattern">Introduzca una semana válida</small>
+	</div>
+</div>

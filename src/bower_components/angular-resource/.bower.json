@@ -1,0 +1,18 @@
+{
+  "name": "angular-resource",
+  "version": "1.2.27",
+  "main": "./angular-resource.js",
+  "dependencies": {
+    "angular": "1.2.27"
+  },
+  "homepage": "https://github.com/educarm/angular-resource",
+  "_release": "1.2.27",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.2.27",
+    "commit": "6492f28b6d1f577a59ab0a23fbbdda8a72e79d7b"
+  },
+  "_source": "git://github.com/educarm/angular-resource.git",
+  "_target": "~1.2.17",
+  "_originalSource": "educarm/angular-resource"
+}

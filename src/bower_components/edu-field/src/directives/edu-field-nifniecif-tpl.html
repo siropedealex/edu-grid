@@ -1,0 +1,38 @@
+<div class="form-group   {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	
+	<div class="input-group">
+		<span class="input-group-btn">
+			<button class="btn btn-default" type="button">{{options.textbutton}}</button>
+		</span>
+		
+			<input type="text" style="min-width:250px" 
+			       
+					class="form-control" 
+					id="{{id}}"
+					name="{{name}}"
+					autofocus="{{options.autofocus}}"
+					placeholder="{{options.placeholder}}"
+					autofocus="{{options.autofocus}}"
+					ng-required="{{options.required}}"
+					ng-disabled="{{options.disabled}}"
+					ng-minlength="{{options.min}}"
+					ng-maxlength="{{options.max}}"
+					ng-pattern="nifniecifValidator"
+					ng-model="value"
+					ng-blur="onBlur()"
+					ng-focus="onFocus()"
+					ng-change="onChange()">
+			
+	</div>
+
+		<div class="help-block has-error" ng-show="$invalid" style="position:absolute;top:50px">
+			<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un {{options.textbutton|| 'Número de documento'}}</small>
+			<small class="error" ng-show="$invalidMinlength">Debe tener al menos {{options.min}} caracteres</small>
+			<small class="error" ng-show="$invalidMaxlength">No puede tener más de {{options.max}} caracteres</small>
+			<small class="error" ng-show="$invalidPattern">Introduzca un {{options.textbutton|| 'Número de documento'}} válido</small>
+		</div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "name": "angular-ui-bootstrap3",
+  "version": "0.12.0",
+  "main": "./ui-bootstrap-tpls.js",
+  "dependencies": {},
+  "homepage": "https://github.com/educarm/angular-ui-bootstrap3",
+  "_release": "0.12.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.12.0",
+    "commit": "6b645fe13cc495ceabafa1ec5e68df0f3d9a7c83"
+  },
+  "_source": "git://github.com/educarm/angular-ui-bootstrap3.git",
+  "_target": "~0.12.0",
+  "_originalSource": "educarm/angular-ui-bootstrap3"
+}

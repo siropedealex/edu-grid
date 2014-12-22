@@ -1,0 +1,21 @@
+<div class="form-group  {{options.col}}" ng-class="{'has-error':  $invalid, 'has-success': !$invalid && $dirty}" style="position:relative">
+	<label for="{{id}}">
+		{{options.label}}
+		{{options.required ? '*' : ''}}
+	</label>
+	
+	<div text-angular 
+			id="{{id}}"
+		    name="{{name}}"
+			ta-toolbar="options.toolbar || [['h1','h2','h3'],['bold','italics']] " 
+			ng-model="value"
+			ng-required="{{options.required}}"
+			autofocus="{{options.autofocus}}"
+			ng-blur="onBlur()"
+			ng-focus="onFocus()"
+			ng-change="onChange()">
+	</div>
+	<div class="help-block has-error" ng-show="$invalid"  style="position:absolute;top:50px">
+		<small class="error" ng-show="$invalidRequired">Campo obligatorio. Introduzca un valor</small>
+	</div>
+</div>

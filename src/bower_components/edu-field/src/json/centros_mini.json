@@ -1,0 +1,30 @@
+{"centros":[
+  {
+    "vcodcen":30011193,
+    "vdencen":" ESC.MUN.DE MUSICA-PRUEBAS, CARAVACA DE LA CRUZ (CARAVACA DE LA CRUZ)",
+    "vdomcen":"CARAVACA DE LA CRUZ ",
+    "vloccen":"CARAVACA DE LA CRUZ",
+    "vmuncen":"ABANILLA",
+    "vcpcen":30400,
+    "vtelcen":"968700100",
+    "vfax":"968700100",
+    "vemail":"Conservatorio@caravacadelacruz.es",
+    "vweb":"www.terra.es/personal9/cpmcaravaca",
+    "vtitularidad":"P",
+	"fecha":1288329623006
+  },
+  {
+    "vcodcen":30011211,
+    "vdencen":" ESC.MUN.DE MUSICA-PRUEBAS, CEHEGIN (CEHEGÍN)",
+    "vdomcen":"BEGASTRI,S/N ",
+    "vloccen":"CEHEGIN",
+    "vmuncen":"MURCIA",
+    "vcpcen":30430,
+    "vtelcen":"968740837",
+    "vfax":"968740737",
+    "vemail":"",
+    "vweb":"",
+    "vtitularidad":"P",
+	"fecha":1218323623006
+  }
+  ]}

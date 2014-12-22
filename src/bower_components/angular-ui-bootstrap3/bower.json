@@ -1,0 +1,7 @@
+{
+  "name": "angular-ui-bootstrap3",
+  "version": "0.11.0",
+  "main": "./ui-bootstrap-tpls.js",
+  "dependencies": {
+  }
+}
