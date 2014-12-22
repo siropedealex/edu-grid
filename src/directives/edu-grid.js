@@ -85,6 +85,7 @@
 				}
 				
 				$scope.internalControl.showOverlayFormSuccessError = function(type,text,duration) {
+				
 					$scope.options.overlayFormSuccessErrorGrid={};
 					$scope.options.overlayFormSuccessErrorGrid.show=true;
 					$scope.options.overlayFormSuccessErrorGrid.type=type=='1'?'success':'danger';
@@ -283,7 +284,10 @@
 	                    $scope.pagination();
 						
 						$scope.options.showOverlayLoadingGrid=false;
-	                });
+	                },function(data){
+							$scope.internalControl.showOverlayFormSuccessError('0',data.data,20005);
+					
+					});
                 };
                 
                 $scope.refresh=function(){
@@ -306,10 +310,14 @@
                        oParams=$scope.options.listListeners.transformParams(oParams);
 					}
 					
+					
 					$scope.api.getCount(oParams,function (data) {
                    	    	$scope.options.metaData.total=data.count;
                    	    	$scope.getData(oParams);
-                    });
+                    },function(data){ 
+
+							$scope.internalControl.showOverlayFormSuccessError('0',data.data,20000);
+					});
 					if ($scope.options.hasOwnProperty('listListeners') && typeof $scope.options.listListeners.onButtonRefreshClick == 'function'){
                        $scope.options.listListeners.onButtonRefreshClick($scope.list);
 					}
