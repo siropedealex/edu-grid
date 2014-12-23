@@ -297,6 +297,8 @@ eduGridDirectives.directive('eduGrid', function () {
             }
             $scope.pagination();
             $scope.options.showOverlayLoadingGrid = false;
+          }, function (data) {
+            $scope.internalControl.showOverlayFormSuccessError('0', data.data, 20005);
           });
         };
         $scope.refresh = function () {
@@ -318,6 +320,8 @@ eduGridDirectives.directive('eduGrid', function () {
           $scope.api.getCount(oParams, function (data) {
             $scope.options.metaData.total = data.count;
             $scope.getData(oParams);
+          }, function (data) {
+            $scope.internalControl.showOverlayFormSuccessError('0', data.data, 20000);
           });
           if ($scope.options.hasOwnProperty('listListeners') && typeof $scope.options.listListeners.onButtonRefreshClick == 'function') {
             $scope.options.listListeners.onButtonRefreshClick($scope.list);
