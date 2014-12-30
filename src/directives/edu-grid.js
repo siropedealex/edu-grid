@@ -69,11 +69,11 @@
 				$scope.internalControl = $scope.options.gridControl || {};
 			  
 				$scope.internalControl.refresh = function() {
-					$scope.updateFields();  
+					$scope.refresh();  
 				}
 				
-				$scope.internalControl.initializeFields = function() {
-					$scope.refresh();  
+				$scope.internalControl.updateFields = function() {
+					$scope.updateFields();  
 				}
 				
 				
@@ -338,7 +338,7 @@
 	            },500);
 				
 				//Inicializa la lista de campos para que funcionen correctamente.
-				$scope.initializeFields() = function(){
+				$scope.updateFields() = function(){
 					for (var fieldKey in $scope.options.listFields) {
 						$scope.options.listFields.sorting = '';
 
