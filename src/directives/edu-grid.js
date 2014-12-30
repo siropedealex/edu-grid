@@ -72,7 +72,7 @@
 					$scope.updateFields();  
 				}
 				
-				$scope.internalControl.updateFields = function() {
+				$scope.internalControl.initializeFields = function() {
 					$scope.refresh();  
 				}
 				
@@ -338,7 +338,7 @@
 	            },500);
 				
 				//Inicializa la lista de campos para que funcionen correctamente.
-				$scope.updateFields() = function(){
+				$scope.initializeFields() = function(){
 					for (var fieldKey in $scope.options.listFields) {
 						$scope.options.listFields.sorting = '';
 
