@@ -72,6 +72,11 @@
 					$scope.refresh();  
 				}
 				
+				$scope.internalControl.updateFields = function() {
+					$scope.updateFields();  
+				}
+				
+				
 				$scope.internalControl.showOverlayLoading = function(bShow) {
 					$scope.options.showOverlayLoadingGrid=bShow;  
 				}
@@ -330,7 +335,21 @@
 				
                 setTimeout(function(){
 	     	       $scope.refresh();
-	            },500); 
+	            },500);
+				
+				//Inicializa la lista de campos para que funcionen correctamente.
+				$scope.updateFields() = function(){
+					for (var fieldKey in $scope.options.listFields) {
+						$scope.options.listFields.sorting = '';
+
+						if (typeof $scope.options.listFields[fieldKey].renderer !== 'function') {
+							$scope.options.listFields[fieldKey].orderByValue = $scope.options.listFields[fieldKey].column;
+							$scope.options.listFields[fieldKey].renderer = function (input, row, column,type) {
+								return input;
+							};
+						}
+					}
+				};
 				
                 // ON CLICK EXTRA BUTTON
 				$scope.clickExtraButton=function(value){ 
