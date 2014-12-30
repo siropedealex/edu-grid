@@ -110,7 +110,7 @@ eduGridDirectives.directive('eduGrid', function () {
         $scope.internalControl.refresh = function () {
           $scope.updateFields();
         };
-        $scope.internalControl.updateFields = function () {
+        $scope.internalControl.initializeFields = function () {
           $scope.refresh();
         };
         $scope.internalControl.showOverlayLoading = function (bShow) {
@@ -337,7 +337,7 @@ eduGridDirectives.directive('eduGrid', function () {
           $scope.refresh();
         }, 500);
         //Inicializa la lista de campos para que funcionen correctamente.
-        $scope.updateFields() = function () {
+        $scope.initializeFields() = function () {
           for (var fieldKey in $scope.options.listFields) {
             $scope.options.listFields.sorting = '';
             if (typeof $scope.options.listFields[fieldKey].renderer !== 'function') {
