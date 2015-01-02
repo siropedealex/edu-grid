@@ -417,7 +417,9 @@ eduGridDirectives.directive('eduGrid', function () {
           clearInterval(timerOnChangeSearchQuery);
           timerOnChangeSearchQuery = setInterval(function () {
             $scope.refresh();
+            $scope.setFirstPage();
             clearInterval(timerOnChangeSearchQuery);
+            ;
           }, 750);
         };
         // ---

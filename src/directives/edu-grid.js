@@ -424,7 +424,11 @@
 				 var timerOnChangeSearchQuery=null;
                  $scope.onChangeSearchQuery=function(){
 					clearInterval(timerOnChangeSearchQuery);
-					timerOnChangeSearchQuery = setInterval(function(){$scope.refresh();clearInterval(timerOnChangeSearchQuery);}, 750);
+					timerOnChangeSearchQuery = setInterval(function(){
+					$scope.refresh();
+					$scope.setFirstPage();
+					clearInterval(timerOnChangeSearchQuery)
+					;}, 750);
 
 				 };
 				 
