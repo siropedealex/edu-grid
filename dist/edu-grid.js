@@ -347,6 +347,9 @@ eduGridDirectives.directive('eduGrid', function () {
               };
             }
           }
+          if (typeof $scope.options.crudUri !== 'undefined' && $scope.options.crudUri !== '') {
+            $scope.api = dataFactoryGrid($scope.options.crudUri, typeof $scope.options.actions !== 'undefined' ? $scope.options.actions : '');
+          }
         };
         // ON CLICK EXTRA BUTTON
         $scope.clickExtraButton = function (value) {
