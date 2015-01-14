@@ -47,6 +47,9 @@
 			    $scope.options.metaData.offset=0;
 				$scope.options.showOverlayLoading=false;
 				$scope.currentPage = undefined;
+				if (!$scope.options.hasOwnProperty('allFieldsGlobalSearch')){
+					$scope.options.allFieldsGlobalSearch=true;
+				}
 				$scope.currentPage={
             	                       offset:0,
             	                       label:1
