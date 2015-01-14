@@ -253,7 +253,18 @@
                 	//var oParams={};
                 	if(typeof $scope.options.metaData.limit!=='undefined' && typeof $scope.options.metaData.offset!=='undefined'){
                         oParams.limit=$scope.options.metaData.limit;
-                        oParams.filter=(typeof $scope.searchQuery!=='undefined'?$scope.searchQuery.toUpperCase().trim():'');
+                        if ($scope.options.allFieldsGlobalSearch){
+							oParams.filter=(typeof $scope.searchQuery!=='undefined'?$scope.searchQuery.toUpperCase().trim():'');
+						} else {
+							if ($scope.options.hasOwnProperty('fieldsGlobalSearch')){
+								for(field in $scope.options.fieldsGlobalSearch){															
+									oParams[$scope.options.fieldsGlobalSearch[field]]=(typeof $scope.searchQuery!=='undefined'?$scope.searchQuery.toUpperCase().trim():'');
+								}
+							}
+							else {
+								throw new Error('options are required!');
+							}
+						}
                         oParams.offset=$scope.options.metaData.offset;
 						oParams.orderby=$scope.options.metaData.orderBy;
 						oParams.order=$scope.options.metaData.order;
@@ -297,7 +308,18 @@
                 
                 $scope.refresh=function(){
 					var oParams={};
-					oParams.filter=(typeof $scope.searchQuery!=='undefined'?$scope.searchQuery.toUpperCase().trim():'');
+					if ($scope.options.allFieldsGlobalSearch){
+							oParams.filter=(typeof $scope.searchQuery!=='undefined'?$scope.searchQuery.toUpperCase().trim():'');
+					}else {
+							if ($scope.options.hasOwnProperty('fieldsGlobalSearch')){
+								for(field in $scope.options.fieldsGlobalSearch){															
+									oParams[$scope.options.fieldsGlobalSearch[field]]=(typeof $scope.searchQuery!=='undefined'?$scope.searchQuery.toUpperCase().trim():'');
+								}
+							}
+							else {
+								throw new Error('options are required!');
+							}
+						}
 					if($scope.options.hasOwnProperty("fieldFk") && typeof $scope.options.fieldFk!='undefined' && $scope.options.hasOwnProperty("valueFk") && typeof $scope.options.valueFk!='undefined'){
 						oParams["fieldFk"]=$scope.options.fieldFk;
 						oParams["valueFk"]=$scope.options.valueFk;

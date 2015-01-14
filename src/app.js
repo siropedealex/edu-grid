@@ -68,6 +68,9 @@ app.controller('appController', ['$scope','$http','dataFactoryGrid', function ($
         showPagination: true,
         showItemsPerPage: true,
 		
+		allFieldsGlobalSearch:false,
+		fieldsGlobalSearch:['vdencen','vdomcen'],
+		
         showSearch: true,
 		showAvancedSearch:true,
         showMetaData: true,

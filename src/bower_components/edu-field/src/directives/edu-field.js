@@ -274,7 +274,15 @@ eduFieldDirectives.directive('eduField', function formField($http, $compile, $te
 				}
 			}
 			
+			$scope.internalControl.clean = function(value) {
+				if($scope.options.type="select"){
+					$scope.optionsSelect=[];
+				}
+			}
 			
+			if (!$scope.options.hasOwnProperty('loadOnInit')&&$scope.options.type=='select'){
+				$scope.options.loadOnInit=true;
+			}
 			// ---
 			// CONTROL TYPE= iban
 		    // ---
@@ -402,6 +410,7 @@ eduFieldDirectives.directive('eduField', function formField($http, $compile, $te
 				    if(typeof value!='undefined'){
 						sUrl=sUrl+ "&" + value;
 					}
+					//if ($scope.options.loadOnInit){
 						$http.get(sUrl).
 							success(function(data, status, headers, config) {
 							  $scope.optionsSelect=data;
@@ -430,7 +439,7 @@ eduFieldDirectives.directive('eduField', function formField($http, $compile, $te
 							error(function(data, status, headers, config) {
 								
 							});
-					
+					 //}
 				}else if($scope.options.selecttypesource=='array'){
 				
 					$scope.optionsSelect=$scope.options.selectsource;
@@ -470,7 +479,8 @@ eduFieldDirectives.directive('eduField', function formField($http, $compile, $te
 			if($scope.options.type=='select'){
 				if($scope.options.selecttypesource=='url' && (typeof $scope.options.autoload=='undefined' || $scope.options.autoload==true )){
 					var sUrl=$scope.options.selectsource;
-						$http.get(sUrl).
+						if ($scope.options.loadOnInit){
+							$http.get(sUrl).					
 							success(function(data, status, headers, config) {
 							  $scope.optionsSelect=data;
 							  for(var i=0;i<$scope.optionsSelect.length;i++) {
@@ -500,6 +510,7 @@ eduFieldDirectives.directive('eduField', function formField($http, $compile, $te
 							error(function(data, status, headers, config) {
 								
 							});
+						}
 				}else if($scope.options.selecttypesource=='array'){
 					$scope.optionsSelect=$scope.options.selectsource;
 					$scope.$watchCollection('optionsSelect', function() {

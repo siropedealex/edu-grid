@@ -92,11 +92,13 @@ app.controller('appController', ['$scope','$http', function ($scope,$http) {
 					{key: 'autocompleteremotoloadall',type: 'autocomplete',col:'col-md-4',required:true,label: 'Autocomplete datos remotos load all',autocurldataloadall: 'api/v1/municipios',autocsearchfields:"name",autocminlength:3,autocfieldtitle:"value,name",autocfielddescription:"",autocfieldvalue:"value",autocpause:300},											   
 				   
 					{key: 'selectlocal',type: 'select',col:'col-md-4',required:true,label: 'Select datos locales',selecttypesource:'array',selectsource: $scope.municipios,optionname:"name",optionvalue:"value",selectconcatvaluename:true},
-					{key: 'selectremoto',type: 'select',col:'col-md-4',required:true,label: 'Select datos remotos',selecttypesource:'url',selectsource: 'api/v1/municipios',optionname:"name",optionvalue:"value",selectconcatvaluename:true},
+					{key: 'selectremoto', type: 'select',col:'col-md-4',required:true,label: 'Select datos remotos',selecttypesource:'url',selectsource: 'api/v1/municipios',optionname:"name",optionvalue:"value",selectconcatvaluename:true},
 					
 					{key: 'CODIGO_TEMA',
 						fieldListeners:{
 							onChange:function(value){
+								// There are a method 'clean' for empty select options.  Example:
+								// $scope.fields[23].fieldControl.clean();
 								console.log("cambio tema:"+value);
 								$scope.fields[23].fieldControl.refresh("fieldFk=TEMA&valueFk="+value);
 							}
