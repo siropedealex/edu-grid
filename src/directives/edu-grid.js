@@ -77,6 +77,7 @@
 				
 				$scope.internalControl.updateFields = function() {
 					$scope.updateFields();  
+					$scope.refresh();
 				}
 				
 				

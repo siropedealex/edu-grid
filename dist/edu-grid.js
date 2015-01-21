@@ -115,6 +115,7 @@ eduGridDirectives.directive('eduGrid', function () {
         };
         $scope.internalControl.updateFields = function () {
           $scope.updateFields();
+          $scope.refresh();
         };
         $scope.internalControl.showOverlayLoading = function (bShow) {
           $scope.options.showOverlayLoadingGrid = bShow;
