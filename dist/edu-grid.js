@@ -58,7 +58,7 @@ eduGridDirectives.directive('eduGrid', function () {
         throw new Error('options are required!');
       }
       /**
-                 * Prepare fields
+                 * CAMBIO REALIZADO
                  */
       for (var fieldKey in $scope.options.listFields) {
         $scope.options.listFields.sorting = '';
